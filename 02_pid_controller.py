@@ -105,7 +105,7 @@ class Robot(object):
 
 robot = Robot()
 robot.set(0, 1, 0)
-
+robot.set_steering_drift(0.1)
 
 def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
     x_trajectory = []
@@ -147,7 +147,6 @@ n = len(x_trajectory)
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8,8))
 ax1.plot(x_trajectory, y_trajectory, 'g', label='PID controller')
 ax1.plot(x_trajectory, np.zeros(n), 'r', label='reference')
-
 
 plt.legend()
 plt.show()

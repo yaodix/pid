@@ -103,7 +103,6 @@ class Robot(object):
 #
 # run - does a single control run
 
-
 def make_robot():
     """
     Resets the robot back to the initial position and drift.
@@ -193,3 +192,5 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
 ax1.plot(x_trajectory, y_trajectory, 'g', label='Twiddle PID controller')
 ax1.plot(x_trajectory, np.zeros(n), 'r', label='reference')
 
+plt.legend()
+plt.show()
